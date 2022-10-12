@@ -1,6 +1,6 @@
-int startX = 0;
+int startX = 300;
 int startY = 0;
-int endX = 0;
+int endX = 300;
 int endY = 0;
 //set initial values for each line segment
 void setup() {
@@ -18,8 +18,8 @@ void draw() {
 
 
   while (endX < width) { //while line hasn't gone off right side of screen
-    int changeX = (int) random(20);
-    int changeY = (int) random(-5, 10);
+    int changeX = (int) random(-15,15);
+    int changeY = (int) random(20);
     endX = startX + changeX;
     endY = startY + changeY; 
     line(startX, startY, endX, endY); //make line segment from end of last segment to random point slightly to the right and either up or down
@@ -28,8 +28,8 @@ void draw() {
   }
 }
 void mousePressed() {
-  startX = 0;
+  startX = 300;
   startY = 0;
-  endX = 0;
+  endX = 300;
   endY = 0; //when mouse is pressed, reset start values back to left, starting new lightning bolt
 }
